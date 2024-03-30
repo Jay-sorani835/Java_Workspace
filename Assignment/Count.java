@@ -1,26 +1,28 @@
+package mar14;
 import java.util.Scanner;
 
 public class Count {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the string : ");
-		String str = "Jay_835 Sorani";
+		String str = "jay 123@gmail";
+		char[] ch = str.toCharArray();
 		int l = 0,d = 0,s = 0, o = 0;
-		int n = str.length();
-		for(int i = 0;i < n;i++) {
-			if((str.charAt(i) >= 65 && str.charAt(i) <= 90) || (str.charAt(i) >= 97 && str.charAt(i) <= 122)) {
+		
+		for(int i = 0;i < str.length();i++) {
+			if(Character.isLetter(ch[i])) {
 				l++;
 			}
-			else if (str.charAt(i) >= 48 && str.charAt(i) <= 57) {
+			else if (Character.isDigit(ch[i])) {
 				d++;
 			}
-			else if (str.charAt(i) == 32) {
+			else if (Character.isSpaceChar(ch[i])) {
 				s++;
 			}
 			else {
 				o++;
 			}
 		}
-		System.out.println(str + " in this no. of letters are " + l + ", no. of digits are " + l + ", no. of spaces are " + s + " and other characters are " + o);
+		System.out.println(str + " in this no. of letters are " + l + ", no. of digits are " + d + ", no. of spaces are " + s + " and other characters are " + o);
 	}
 }
