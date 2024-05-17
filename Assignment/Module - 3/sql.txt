@@ -50,7 +50,7 @@ QUERYs :
 -> SELECT * FROM emp WHERE Hiredate < '1981-01-01';
 
 5.List the Empno, Ename, Sal, Daily sal of all emps in the asc order of Annsal.
--> SELECT Empno,Ename,Sal,Sal*12 AS Annsal,Sal*12/30 AS DailySal FROM emp ORDER BY Annsal;
+-> SELECT Empno,Ename,Sal,Sal*12 AS Annsal,Sal/30 AS DailySal FROM emp ORDER BY Annsal;
 
 6.List the Empno, Ename, Sal, Exp of all emps working for Mgr 7369.
 -> SELECT Empno,Ename,Sal FROM emp where Mgr = 7369;
