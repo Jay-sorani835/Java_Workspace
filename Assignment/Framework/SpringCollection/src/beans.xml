@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="t1" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+            	<bean class="com.model.Student">
+            		<property name="id" value ="1"></property>
+            		<property name="fname" value="Jay"></property>
+            		<property name="lname" value="Sorani"></property>
+            		<property name="email" value="jay@gmail.com"></property>
+            		<property name="mobile" value="1212121212"></property>
+            	</bean>
+            	<bean class="com.model.Student">
+            		<property name="id" value ="2"></property>
+            		<property name="fname" value="Mihir"></property>
+            		<property name="lname" value="Sarvaiya"></property>
+            		<property name="email" value="mihir@gmail.com"></property>
+            		<property name="mobile" value="3232323232"></property>
+            	</bean>
+            	<bean class="com.model.Student">
+            		<property name="id" value ="3"></property>
+            		<property name="fname" value="Suketu"></property>
+            		<property name="lname" value="Rola"></property>
+            		<property name="email" value="suketu@gmail.com"></property>
+            		<property name="mobile" value="1231231231"></property>
+            	</bean>
+            	<bean class="com.model.Student">
+            		<property name="id" value ="4"></property>
+            		<property name="fname" value="Meet"></property>
+            		<property name="lname" value="Solanki"></property>
+            		<property name="email" value="meet@gmail.com"></property>
+            		<property name="mobile" value="1234123412"></property>
+            	</bean>
+            	<bean class="com.model.Student">
+            		<property name="id" value ="5"></property>
+            		<property name="fname" value="Smit"></property>
+            		<property name="lname" value="Makodiya"></property>
+            		<property name="email" value="smit@gmail.com"></property>
+            		<property name="mobile" value="2121212121"></property>
+            	</bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentManager" class="com.model.StudentManager">
+        <property name="students" ref="t1"/>
+    </bean>
+
+</beans>

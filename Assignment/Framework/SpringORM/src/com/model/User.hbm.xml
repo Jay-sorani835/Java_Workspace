@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 Nov, 2024 5:47:12 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.model.User" table="User">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="UFIRSTNAME" type="java.lang.String">
+            <column name="UFIRSTNAME" />
+        </property>
+        <property name="ULASTNAME" type="java.lang.String">
+            <column name="ULASTNAME" />
+        </property>
+        <property name="UEMAIL" type="java.lang.String">
+            <column name="UEMAIL" />
+        </property>
+        <property name="UMOBILE" type="java.lang.String">
+            <column name="UMOBILE" />
+        </property>
+        <property name="UPASSWORD" type="java.lang.String">
+            <column name="UPASSWORD" />
+        </property>
+        <property name="UGENDER" type="java.lang.String">
+            <column name="UGENDER" />
+        </property>
+        <property name="UPRO_PIC" type="java.sql.Blob">
+            <column name="UPRO_PIC" />
+        </property>
+    </class>
+</hibernate-mapping>
